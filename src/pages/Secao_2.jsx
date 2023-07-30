@@ -17,7 +17,7 @@ const Secao_2 = ({ maioresNotas }) => {
   useEffect(() => {
     // Calcula a menor nota com base nas duas maiores notas
 
-    if (maioresNotas.nota1 > 0 && maioresNotas.nota2 > 0 && maioresNotas.nota3 > 0) {
+    if (maioresNotas.nota1 > 0 || maioresNotas.nota2 > 0 || maioresNotas.nota3 > 0) {
       const findTwoHighestNotes = () => {
         const notas = [maioresNotas.nota1, maioresNotas.nota2, maioresNotas.nota3]; // Use as variáveis aqui
         notas.sort((a, b) => b - a);
