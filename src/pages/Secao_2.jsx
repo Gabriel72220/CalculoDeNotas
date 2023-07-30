@@ -72,7 +72,7 @@ const Secao_2 = ({ maioresNotas }) => {
       return notas.slice(0, 2); // Retorna um array com as duas maiores notas
     };
   
-    const media = ((nota1Value + nota2Value + nota3Value) / 3);
+    const media = ((nota1 + nota2 + nota3Value) / 3);
     const mediaFormatada = media % 1 === 0 ? media.toFixed(0) : media.toFixed(1);
     setMedia3(mediaFormatada);
   
