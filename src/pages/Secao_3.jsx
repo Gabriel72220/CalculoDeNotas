@@ -9,7 +9,6 @@ const Secao_3 = ({ media }) => {
     const [media3, setMedia3] = useState('');
     const [mensagem, setMensagem] = useState('Realize o cálculo da média das notas obtidas nas seções anteriores. Caso já tenha realizado as provas, insira sua média, juntamente com a nota do exame final, para determinar o seu resultado final.');
     const [mostrar, setmostrar] = useState(false)
-    console.log('sexxx', media)
 
     // useEffect para atualizar as notas quando maioresNotas for alterado
     useEffect(() => {
@@ -37,12 +36,11 @@ const Secao_3 = ({ media }) => {
         const nota1Value = typeof nota1 === 'string' ? parseFloat(nota1.replace(',', '.')) : 0;
         const nota2Value = typeof nota2 === 'string' ? parseFloat(nota2.replace(',', '.')) : 0;
 
-        console.log(nota2Value, nota1Value)
+        (nota2Value, nota1Value)
         // Função para encontrar as duas maiores notas
 
         const media = ((10 - nota1Value));
-        console.log(media)
-        console.log('oi')
+
 
         if (nota2Value >= media) {
 
