@@ -31,22 +31,31 @@ const Secao_1 = () => {
     const mediaFormatada = media % 1 === 0 ? media.toFixed(0) : media.toFixed(1);
     setMedia3(mediaFormatada);
     if (media >= 7) {
-      setMensagem('Aprovado');
-    } else if (media) {
-      if (fazerSubstitutiva) {
+      setMensagem(
+        <div id="aviso">
+          <p id='centralizar' style={{ color:  'green' }}>Parabéns! Você está aprovado na disciplina!</p>
+        </div>);
+    } else if (3>media) {
+      setMensagem(
+        <div id="aviso">
+          <p id='centralizar' style={{ color:  'red' }}> Você está reprovado na disciplina por não alcançar a média mínima de 3 pontos</p>
+        </div>);
+
+    }
+      else if (fazerSubstitutiva) {
         setMaioresNotas({ nota1: Number(nota1), nota2: Number(nota2), nota3: Number(nota3), media: mediaFormatada, substituta: true }); // Envia as três notas
         setMensagem(
           <div id="aviso">
-            <p id='centralizar'> Deve fazer avaliação substitutiva</p>
+            <p id='centralizar' style={{ color:  'red' }}>Você deverá fazer a Avaliação Substitutiva.</p>
           </div>);
       } else {
         setMaioresNotas({ media: media, substituta: false })
         setMensagem(
           <div id="aviso">
-            <p id='centralizar'>Deve fazer exame final</p>
+            <p id='centralizar' style={{ color:  'red' }}>Você deverá fazer o Exame Final.</p>
           </div>);
       }
-    }
+    
 
     const [maiorNota1, maiorNota2, menorNota] = findTwoHighestNotes();
   };
@@ -99,7 +108,7 @@ const Secao_1 = () => {
                   <label id="mostra_media" style={{ color: media3 >= 7 ? 'green' : 'red' }}>{media3}</label>
                 </p>
                 <p id='status' >Status:</p>
-                {mensagem && <p style={{ color: mensagem === 'Aprovado' ? 'green' : 'red' }}>{mensagem}</p>}
+                {mensagem && <p>{mensagem}</p>}
               </>
             )}
           </div>

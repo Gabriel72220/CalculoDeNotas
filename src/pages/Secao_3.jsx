@@ -46,14 +46,14 @@ const Secao_3 = ({ media }) => {
 
             setMensagem(
                 <div id="aviso">
-                    <p id='centralizar'>Aprovado</p>
+                    <p id='centralizar' style={{ color: 'green'}}>Parabéns! Você está aprovado na disciplina!</p>
                 </div>);
 
         }
         else if (nota2Value) {
             setMensagem(
                 <div id="aviso">
-                    <p id='centralizar'>Reprovado por Média Final</p>
+                    <p id='centralizar' style={{ color: 'red'}}>Você está reprovado na disciplina por não alcançar a Média Final!</p>
                 </div>);
 
 

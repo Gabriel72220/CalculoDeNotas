@@ -73,14 +73,24 @@ const Secao_2 = ({ maioresNotas }) => {
     setMedia3(mediaFormatada);
   
     if (media >= 7) {
-      setMensagem('Aprovado');
-    } else {
+      setMensagem(
+        <div id="aviso">
+          <p id='centralizar' style={{ color: 'green'}}>Parabéns! Você está aprovado na disciplina!</p>
+        </div>);
+    } 
+    else if ((media < 3)){
+      setMensagem(
+        <div id="aviso">
+          <p id='centralizar' style={{ color: 'red'}}>Você está reprovado na disciplina por não alcançar a média mínima de 3 pontos.</p>
+        </div>);
+    }
+    else {
       setMedia({media:mediaFormatada, substituta:false}); // Atualize a variável de estado 'mediaState'
 
       
       setMensagem(
         <div id="aviso">
-          <p id='centralizar'>Deve fazer exame final</p>
+          <p id='centralizar' style={{ color: 'red'}}>Você deverá fazer o Exame Final.</p>
         </div>);
     
     }
@@ -133,7 +143,7 @@ const Secao_2 = ({ maioresNotas }) => {
                     <label id="mostra_media2" style={{ color: media3 >= 7 ? 'green' : 'red' }}>{media3}</label>
                   </p>
                   <p id='status' >Status:</p>
-                  {mensagem && <p style={{ color: mensagem === 'Aprovado' ? 'green' : 'red' }}>{mensagem}</p>}
+                  {mensagem && <p >{mensagem}</p>}
                 </>
               )}
             </div>
