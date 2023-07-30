@@ -1,7 +1,7 @@
 import React from 'react';
 import "./navbar.scss";
 import { SignOut } from '@phosphor-icons/react';
-import logo from '../../assets/logo.png'
+import logo from '../../../public/assets/logo.png'
 
 const Navbar = () => {
   //const nome = "jose";
