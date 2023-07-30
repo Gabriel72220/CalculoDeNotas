@@ -24,7 +24,6 @@ const Secao_2 = ({ maioresNotas }) => {
         return notas.slice(0, 2); // Retorna um array com as duas maiores notas
       };
       let maiores = findTwoHighestNotes()
-      console.log('ett', maiores)
       setNota1(maiores[0]);
       setNota2(maiores[1]);
       let resultado = 21 - (maiores[0] + maiores[1])
@@ -41,9 +40,6 @@ const Secao_2 = ({ maioresNotas }) => {
       const nota2 = maioresNotas.nota2;
       const nota3 = maioresNotas.nota3;
       const menorNota = calcularMenorNota(nota1, nota2, nota3);
-
-      console.log('Menor nota:', menorNota);
-
 
       setMensagem(
         <div id='continuacao'>
@@ -74,7 +70,6 @@ const Secao_2 = ({ maioresNotas }) => {
   
     const media = ((Number(nota1) + Number(nota2) + Number(nota3)) / 3);
     const mediaFormatada = media % 1 === 0 ? media.toFixed(0) : media.toFixed(1);
-    console.log(mediaFormatada)
     setMedia3(mediaFormatada);
   
     if (media >= 7) {
