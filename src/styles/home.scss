@@ -1,0 +1,26 @@
+#main {
+    margin: 0px;
+    display: flex;
+    flex-direction: column; /* Set the main flex container to stack elements vertically */
+    height: 90%;
+    gap: 30px; /* Add gap between the sections */
+  }
+  
+  #aside-container {
+    
+    width: 30%;
+    height: 100%;
+    min-width: fit-content;
+    min-height: fit-content;
+  }
+  
+  @media (max-width: 600px) {
+    #aside-container {
+        
+      display: block; /* Change display to block to stack elements vertically on smaller screens */
+      width: 100%;
+      height: auto; /* Allow the container to adjust its height based on the content */
+      margin-top: 2%; /* Add some space between the sections */
+    }
+  }
+  
