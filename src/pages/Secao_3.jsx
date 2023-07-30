@@ -73,7 +73,7 @@ const Secao_3 = ({ media }) => {
         <div id="formulario">
             <h2 className='titulo'>Calculo do exame final</h2>
             <form name="form_media" id="form_media" action="index.php" method="POST">
-                <div className=''></div>
+                
                 <div id="conteudo">
                     <div id="esquerda">
                         <div className="media-input">
