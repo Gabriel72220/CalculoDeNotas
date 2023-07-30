@@ -30,7 +30,6 @@ const Secao_1 = () => {
     const media = ((nota1Value + nota2Value + nota3Value) / 3);
     const mediaFormatada = media % 1 === 0 ? media.toFixed(0) : media.toFixed(1);
     setMedia3(mediaFormatada);
-    console.log(mediaFormatada)
     if (media >= 7) {
       setMensagem('Aprovado');
     } else if (media) {
