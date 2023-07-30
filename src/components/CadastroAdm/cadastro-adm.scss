@@ -1,0 +1,58 @@
+#formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+    
+}
+
+
+#div_cadastro {
+    
+    display: flex;
+    flex-wrap: wrap;
+    #formcadastro {
+       
+        margin-left: 27%;
+        
+
+        .cadastrar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            .input_cadastro{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+
+            }
+            label {
+                width: 150px;
+                flex-basis: 150px; /* defina o tamanho que desejar */
+                margin-right: 1rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-align: center;
+
+                
+            }
+
+            input {
+                    padding: 0.5rem;
+            }
+
+        }
+    }
+}
+.cadastrar input{
+    flex: 1;
+    margin-left: 10px;
+    
+}
+button{
+    margin-top: 5%;
+}
+
