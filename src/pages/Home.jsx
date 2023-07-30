@@ -1,10 +1,6 @@
 import React, { useEffect,useState } from 'react';
 import "../styles/global.scss";
 import "../styles/home.scss"
-import { Trash } from "@phosphor-icons/react";
-import Navbar from '../components/Navbar';
-import AsideItems from '../components/AsideItems';
-import DependentInfo from '../components/DependentInfo';
 import Secao_1 from './Secao_1';
 import Secao_2 from './Secao_2';
 import Secao_3 from './Secao_3';
