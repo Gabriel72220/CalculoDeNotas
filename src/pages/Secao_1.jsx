@@ -33,12 +33,12 @@ const Secao_1 = () => {
     if (media >= 7) {
       setMensagem(
         <div id="aviso">
-          <p id='centralizar' style={{ color:  'green' }}>Parabéns! Você está aprovado na disciplina!</p>
+          <p id='centralizar' style={{ color:  'green' }}>Parabéns! Você alcançou a aprovação na disciplina!</p>
         </div>);
     } else if (3>media) {
       setMensagem(
         <div id="aviso">
-          <p id='centralizar' style={{ color:  'red' }}> Você está reprovado na disciplina por não alcançar a média mínima de 3 pontos</p>
+          <p id='centralizar' style={{ color:  'red' }}>Você reprovou na disciplina por não alcançar a Média Final!</p>
         </div>);
 
     }
